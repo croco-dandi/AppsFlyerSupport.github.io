@@ -53,7 +53,7 @@ var result = window.AF_SMART_SCRIPT.generateOneLinkURL({
     //referrerSkipList, // optional
     //urlSkipList // optional
 })
-
+document.addEventListener("DOMContentLoaded", function () {
 var result_url = "No output from script"
 if (result) {
     result_url = result.clickURL;
@@ -92,7 +92,7 @@ window.AF_SMART_SCRIPT.displayQrCode(elementId);
     console.log("SD: after displaying QR code");
 
 }
-
+});
   </script>
 </head>
 <body>
