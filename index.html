@@ -83,11 +83,18 @@ if (result) {
     // Create QR code from the generated OneLink URL
     console.log("SD1: before display QR code");
     console.log("result_url: " + result_url);
-   // var elementId = document.querySelectorAll('.Class_AppsFlyerQRCode')[0]?.id;
-  const elementId = "qr-code-container";  
-  console.log("elementId: " + elementId);
-    // window.AF_SMART_SCRIPT.displayQrCode("AppsFlyerQR", qrOptions);
-    window.AF_SMART_SCRIPT.displayQrCode(result_url, elementId);
+
+  // Render QR code
+    const elementId = "qr-code-container";
+    const container = document.getElementById(elementId);
+
+    if (container && typeof window.AF_SMART_SCRIPT.displayQrCode === "function") {
+      window.AF_SMART_SCRIPT.displayQrCode(elementId, {
+        codeColor: "#2D2D2C"
+      });
+    } else {
+      console.error("QR code container not found or displayQrCode is not available.");
+    }
     //window.AF_SMART_SCRIPT.displayQrCode(elementId);
     console.log("SD: after displaying QR code");
 
