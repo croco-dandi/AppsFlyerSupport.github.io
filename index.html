@@ -81,8 +81,9 @@ if (result) {
     // Create QR code from the generated OneLink URL
     console.log("SD1: before display QR code");
     console.log("result_url: " + result_url);
-    var elementId = document.querySelectorAll('.Class_AppsFlyerQRCode')[0]?.id;
-    console.log("elementId: " + elementId);
+   // var elementId = document.querySelectorAll('.Class_AppsFlyerQRCode')[0]?.id;
+  const elementId = "qr-code-container";  
+  console.log("elementId: " + elementId);
     // window.AF_SMART_SCRIPT.displayQrCode("AppsFlyerQR", qrOptions);
     window.AF_SMART_SCRIPT.displayQrCode(result_url, elementId);
     //window.AF_SMART_SCRIPT.displayQrCode(elementId);
