@@ -86,10 +86,7 @@ if (result) {
 
   // Render QR code
     const elementId = "qr-code-container";
-    const container = document.getElementById(elementId);
-    window.AF_SMART_SCRIPT.displayQrCode(elementId, {
-        codeColor: "#2D2D2C"
-      });
+    window.AF_SMART_SCRIPT.displayQrCode(elementId, {codeColor: "#2D2D2C"});
 
     //window.AF_SMART_SCRIPT.displayQrCode(elementId);
     console.log("SD: after displaying QR code");
