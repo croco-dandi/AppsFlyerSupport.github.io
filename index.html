@@ -31,6 +31,8 @@ var custom_ss_gtm_ui = { paramKey: "af_ss_gtm_ui", defaultValue: "true" };
 //Onelink URL is generated.
 
 // See an example of Smart Script implementation via Google Tag Manager: https://appsflyersdk.github.io/appsflyer-onelink-smart-script/examples/google_tag_manager.html?my_source=email&app_dest=planes&typeid=b787&msg_id=f7h8
+document.addEventListener("DOMContentLoaded", function () {
+  // your existing code goes here
 
 var result = window.AF_SMART_SCRIPT.generateOneLinkURL({
     oneLinkURL,
@@ -89,13 +91,8 @@ if (result) {
     //window.AF_SMART_SCRIPT.displayQrCode(elementId);
     console.log("SD: after displaying QR code");
 
-    // Optionally - fire an impression.
-    // The impression will fire to https://impressions.onelink.me//....
-    /*setTimeout(() => {
-        window.AF_SMART_SCRIPT.fireImpressionsLink();
-        console.log("Impression fired");
-    }, 1000);*/
 }
+});
   </script>
 </head>
 <body>
