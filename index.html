@@ -33,7 +33,7 @@ var custom_ss_gtm_ui = { paramKey: "af_ss_gtm_ui", defaultValue: "true" };
 // See an example of Smart Script implementation via Google Tag Manager: https://appsflyersdk.github.io/appsflyer-onelink-smart-script/examples/google_tag_manager.html?my_source=email&app_dest=planes&typeid=b787&msg_id=f7h8
 
   // your existing code goes here
-
+document.addEventListener("DOMContentLoaded", function () {
 var result = window.AF_SMART_SCRIPT.generateOneLinkURL({
     oneLinkURL,
  webReferrer,
@@ -53,7 +53,7 @@ var result = window.AF_SMART_SCRIPT.generateOneLinkURL({
     //referrerSkipList, // optional
     //urlSkipList // optional
 })
-document.addEventListener("DOMContentLoaded", function () {
+
 var result_url = "No output from script"
 if (result) {
     result_url = result.clickURL;
@@ -86,7 +86,6 @@ if (result) {
 
   // Render QR code
     const elementId = "qr-code-container";
-  //  window.AF_SMART_SCRIPT.displayQrCode(elementId, {codeColor: "#2D2D2C"});
 window.AF_SMART_SCRIPT.displayQrCode(elementId);
     //window.AF_SMART_SCRIPT.displayQrCode(elementId);
     console.log("SD: after displaying QR code");
