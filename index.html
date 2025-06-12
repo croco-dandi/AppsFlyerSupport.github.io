@@ -87,14 +87,10 @@ if (result) {
   // Render QR code
     const elementId = "qr-code-container";
     const container = document.getElementById(elementId);
-
-    if (container && typeof window.AF_SMART_SCRIPT.displayQrCode === "function") {
-      window.AF_SMART_SCRIPT.displayQrCode(elementId, {
+    window.AF_SMART_SCRIPT.displayQrCode(elementId, {
         codeColor: "#2D2D2C"
       });
-    } else {
-      console.error("QR code container not found or displayQrCode is not available.");
-    }
+
     //window.AF_SMART_SCRIPT.displayQrCode(elementId);
     console.log("SD: after displaying QR code");
 
