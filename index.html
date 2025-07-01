@@ -85,10 +85,14 @@ if (result) {
     console.log("result_url: " + result_url);
 
   // Render QR code
+  setTimeout(() => {
+              window.AF_SMART_SCRIPT.fireImpressionsLink();
+         
     const elementId = "qr-code-container";
 window.AF_SMART_SCRIPT.displayQrCode(elementId);
     //window.AF_SMART_SCRIPT.displayQrCode(elementId);
     console.log("SD: after displaying QR code");
+            }, 1000);
 
 }
 //});
