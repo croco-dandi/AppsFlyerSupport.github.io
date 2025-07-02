@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AppsFlyer Smart Banner & QR</title>
+  <style>
+    #qr-code-container {
+      width: 200px;
+      height: 200px;
+      margin-top: 20px;
+      border: 1px solid #ccc;
+    }
+  </style>
+<script>
+!function(t,e,n,s,a,c,i,o,p){t.AppsFlyerSdkObject=a,t.AF=t.AF||function(){(t.AF.q=t.AF.q||[]).push([Date.now()].concat(Array.prototype.slice.call(arguments)))},t.AF.id=t.AF.id||i,t.AF.plugins={},o=e.createElement(n),p=e.getElementsByTagName(n)[0],o.async=1,o.src="https://websdk.appsflyer.com?"+(c.length>0?"st="+c.split(",").sort().join(",")+"&":"")+(i.length>0?"af_id="+i:""),p.parentNode.insertBefore(o,p)}(window,document,"script",0,"AF","banners",{banners: {key: "79a0c7a8-f12d-4915-91a9-e426f117689b"}});
+AF('banners', 'showBanner')
+</script>
+</head>
+<body>
+  <h2>HELLO this test is for Smart Script QR code</h2>
+
+  <!-- Links for CTA buttons -->
+  <a class="appsflyer_andrd_link" href="#">Download for Android</a>
+  <a class="appsflyer_ios_link" href="#">Download for iOS</a>
+
+  <!-- 🔳 QR Code Element -->
+  <div id="qr-code-container" class="Class_AppsFlyerQRCode"></div>
+</body>
+</html>
