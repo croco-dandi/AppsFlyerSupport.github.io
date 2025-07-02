@@ -2387,8 +2387,13 @@ saveWebReferrer();
 })();
 
 
-
-          var result_url = AF_SMART_SCRIPT_RESULT.clickURL;
+var result = window.AF_SMART_SCRIPT.generateOneLinkURL({
+  oneLinkURL,
+  afParameters,
+  referrerSkipList, // optional
+  urlSkipList // optional
+})
+ var result_url = "No output from script"
       if (result_url) {
             document.getElementById('andrd_link').setAttribute('href', result_url);
             document.getElementById('ios_link').setAttribute('href', result_url);
