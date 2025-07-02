@@ -2386,33 +2386,34 @@ saveWebReferrer();
   };
 })();
 
+  const AF_SMART_SCRIPT_RESULT = window.AF_SMART_SCRIPT.generateOneLinkURL({
+    oneLinkURL: 'https://yourbrand.onelink.me/abc123', // 🔁 Replace with your real OneLink template
+    afParameters: {
+      mediaSource: { keys: ['pid'], defaultValue: 'smart_script_test' },
+      campaign: { keys: ['c'], defaultValue: 'qr_test_campaign' }
+    }
+  });
 
+  const result_url = AF_SMART_SCRIPT_RESULT?.clickURL;
+  if (result_url) {
+    document.getElementById('andrd_link').setAttribute('href', result_url);
+    document.getElementById('ios_link').setAttribute('href', result_url);
+    window.AF_SMART_SCRIPT.displayQrCode("qr-code-container");
+
+    setTimeout(() => {
+      window.AF_SMART_SCRIPT.fireImpressionsLink();
+      console.log("Impression fired");
+    }, 1000);
+  } else {
+    console.error("Failed to generate OneLink URL");
+  }
 var result = window.AF_SMART_SCRIPT.generateOneLinkURL({
   oneLinkURL,
   afParameters,
   referrerSkipList, // optional
   urlSkipList // optional
 })
- var result_url = "No output from script"
-      if (result_url) {
-            document.getElementById('andrd_link').setAttribute('href', result_url);
-            document.getElementById('ios_link').setAttribute('href', result_url);
-            // Optionally - Create QR code from the generated OneLink URL
-            window.AF_SMART_SCRIPT.displayQrCode("my_qr_code_div_id");
-            //The size of the QR code is defined in the CSS file under #my_qr_code_div_id
-            // #my_qr_code_div_id canvas { 
-            //  height: 200px;
-            //  width: 200px;
-            //}
-            // Optionally - fire an impression.
-            // The impression will fire to https://impressions.onelink.me//.... 
-                     const elementId = "qr-code-container";
-                    window.AF_SMART_SCRIPT.displayQrCode(elementId);
-            setTimeout(() => {
-              window.AF_SMART_SCRIPT.fireImpressionsLink();
-              console.log("Impression fired"); 
-            }, 1000);            
-      }
+
   </script>
 </head>
 <body>
