@@ -80,15 +80,7 @@ var observer = new MutationObserver(function(mutations, obs) {
             
             // Ensure AF_SMART_SCRIPT is fully loaded
             setTimeout(function() {
-                // Create QR code from the generated OneLink URL
-                var qrElement = document.querySelector('.Class_AppsFlyerQRCode');
-                if (qrElement && qrElement.id) {
-                    console.log('QR Code element ID: ' + qrElement.id);
-                    window.AF_SMART_SCRIPT.displayQrCode(qrElement.id, qrOptions);
-                } else {
-                    console.warn("QR code container not found.");
-                }
-
+           
                 //The size of the QR code is defined in the CSS file under #my_qr_code_div_id
                 // #my_qr_code_div_id canvas { 
                 //  height: 200px;
@@ -100,6 +92,15 @@ var observer = new MutationObserver(function(mutations, obs) {
        
                     window.AF_SMART_SCRIPT.fireImpressionsLink();
                     console.log("Impression fired");
+                   // Create QR code from the generated OneLink URL
+                var qrElement = document.querySelector('.Class_AppsFlyerQRCode');
+                if (qrElement && qrElement.id) {
+                    console.log('QR Code element ID: ' + qrElement.id);
+                    window.AF_SMART_SCRIPT.displayQrCode(qrElement.id, qrOptions);
+                } else {
+                    console.warn("QR code container not found.");
+                }
+
               
             }, 1000); 
 
