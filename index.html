@@ -97,11 +97,11 @@ var observer = new MutationObserver(function(mutations, obs) {
 
                 // Optionally - fire an impression.
                 // The impression will fire to https://impressions.onelink.me//.... 
-                setTimeout(function() {
+       
                     window.AF_SMART_SCRIPT.fireImpressionsLink();
                     console.log("Impression fired");
-                }, 1000);
-            }, 500); 
+              
+            }, 1000); 
 
         } else {
             console.warn("Failed to generate OneLink URL.");
