@@ -109,6 +109,16 @@ var observer = new MutationObserver(function(mutations, obs) {
  
         obs.disconnect();
     }
+});
+ 
+observer.observe(document, {
+    childList: true,
+    subtree: true
+});
+
+// See an example of Smart Script implementation via Google Tag Manager: https://appsflyersdk.github.io/appsflyer-onelink-smart-script/examples/google_tag_manager.html?my_source=email&app_dest=planes&typeid=b787&msg_id=f7h8
+
+
   </script>
 </head>
 <body>
