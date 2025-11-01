@@ -15,8 +15,36 @@
 !function(t,e,n,s,a,c,i,o,p){t.AppsFlyerSdkObject=a,t.AF=t.AF||function(){(t.AF.q=t.AF.q||[]).push([Date.now()].concat(Array.prototype.slice.call(arguments)))},t.AF.id=t.AF.id||i,t.AF.plugins={},o=e.createElement(n),p=e.getElementsByTagName(n)[0],o.async=1,o.src="https://websdk.appsflyer.com?"+(c.length>0?"st="+c.split(",").sort().join(",")+"&":"")+(i.length>0?"af_id="+i:""),p.parentNode.insertBefore(o,p)}(window,document,"script",0,"AF","banners",{banners: {key: "e7792879-0848-4a94-af0f-5eff82c2195f"}});
 AF('banners', 'showBanner')
 </script>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect Button</title>
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
-<body>
+
   <h2>HELLO this test is for Smart Script QR code</h2>
 
   <!-- Links for CTA buttons -->
@@ -25,5 +53,13 @@ AF('banners', 'showBanner')
 
   <!-- 🔳 QR Code Element -->
   <div id="qr-code-container" class="Class_AppsFlyerQRCode"></div>
+
+  <body>
+
+    <button onclick="window.location.href='https://minipay.onelink.me/TxK5/zglnhq93'">
+        Go to MiniPay
+    </button>
+
+
 </body>
 </html>
